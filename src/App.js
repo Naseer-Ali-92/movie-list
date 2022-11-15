@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import avatar from './media/avatar.jpg'
 
 function App() {
   const [movies, setMovies] = useState(
@@ -75,7 +76,7 @@ function App() {
         {movies.map((movie) => {
           return (
             <div className='movie-card'>
-              <img src="./media/img.jpg" alt={movie.img.alt} height={200} width={200} />
+              <img src={avatar} alt={movie.img.alt} height={200} width={200} />
               <div className='movie-deatls'>
                 <h2>#{movie.id} - {movie.title} ({movie.year})</h2>
                 <hr />
